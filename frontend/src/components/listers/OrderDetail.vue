@@ -12,7 +12,7 @@
                 <Number label="Qty" v-model="item.qty" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <Number label="CustomerId" v-model="item.customerId" :editMode="editMode" @change="change" />
+                <Number label="OrderId" v-model="item.orderId" :editMode="editMode" @change="change" />
             </div>
         </v-card-text>
 

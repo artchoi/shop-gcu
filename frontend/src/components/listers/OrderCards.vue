@@ -70,7 +70,7 @@
             me.newValue = {
                 'productId': 0,
                 'qty': 0,
-                'customerId': 0,
+                'orderId': 0,
             }
         },
         methods:{

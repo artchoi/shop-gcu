@@ -19,7 +19,7 @@
         <v-card-text>
             <Number label="ProductId" v-model="value.productId" :editMode="editMode"/>
             <Number label="Qty" v-model="value.qty" :editMode="editMode"/>
-            <Number label="CustomerId" v-model="value.customerId" :editMode="editMode"/>
+            <Number label="OrderId" v-model="value.orderId" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions>

@@ -69,7 +69,7 @@
                     { text: "id", value: "id" },
                     { text: "productId", value: "productId" },
                     { text: "qty", value: "qty" },
-                    { text: "customerId", value: "customerId" },
+                    { text: "orderId", value: "orderId" },
                 ],
             order : [],
             newValue: {},
@@ -89,7 +89,7 @@
             this.newValue = {
                 'productId': 0,
                 'qty': 0,
-                'customerId': 0,
+                'orderId': 0,
             }
         },
         methods: {
