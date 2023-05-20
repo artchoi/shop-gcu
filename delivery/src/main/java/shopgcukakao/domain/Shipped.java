@@ -1,9 +1,9 @@
 package shopgcukakao.domain;
 
-import shopgcukakao.domain.*;
-import shopgcukakao.infra.AbstractEvent;
 import java.util.*;
 import lombok.*;
+import shopgcukakao.domain.*;
+import shopgcukakao.infra.AbstractEvent;
 
 @Data
 @ToString
@@ -12,10 +12,11 @@ public class Shipped extends AbstractEvent {
     private Long id;
     private Long orderId;
 
-    public Shipped(Delivery aggregate){
+    public Shipped(Delivery aggregate) {
         super(aggregate);
     }
-    public Shipped(){
+
+    public Shipped() {
         super();
     }
 }

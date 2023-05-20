@@ -1,9 +1,10 @@
 package shopgcukakao.domain;
 
+import java.util.*;
+import lombok.*;
 import shopgcukakao.domain.*;
 import shopgcukakao.infra.AbstractEvent;
-import lombok.*;
-import java.util.*;
+
 @Data
 @ToString
 public class OrderPlaced extends AbstractEvent {
@@ -13,5 +14,3 @@ public class OrderPlaced extends AbstractEvent {
     private Integer qty;
     private Long orderId;
 }
-
-

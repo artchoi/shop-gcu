@@ -1,63 +1,42 @@
 package shopgcukakao.domain;
 
-import shopgcukakao.domain.OrderPlaced;
-import shopgcukakao.OrderApplication;
-import javax.persistence.*;
-import java.util.List;
-import lombok.Data;
 import java.util.Date;
+import java.util.List;
+import javax.persistence.*;
+import lombok.Data;
+import shopgcukakao.OrderApplication;
+import shopgcukakao.domain.OrderPlaced;
 
 @Entity
-@Table(name="Order_table")
+@Table(name = "Order_table")
 @Data
+public class Order {
 
-public class Order  {
-
-    
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    
-    
-    
-    
-    
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
-    
-    
-    
-    
+
     private Long productId;
-    
-    
-    
-    
-    
+
     private Integer qty;
-    
-    
-    
-    
-    
+
     private Long orderId;
 
     @PostPersist
-    public void onPostPersist(){
-
-
+    public void onPostPersist() {
         OrderPlaced orderPlaced = new OrderPlaced(this);
         orderPlaced.publishAfterCommit();
+        // Get request from Order
+        //shopgcukakao.external.Order order =
+        //    Application.applicationContext.getBean(shopgcukakao.external.OrderService.class)
+        //    .getOrder(/** mapping value needed */);
 
     }
 
-    public static OrderRepository repository(){
-        OrderRepository orderRepository = OrderApplication.applicationContext.getBean(OrderRepository.class);
+    public static OrderRepository repository() {
+        OrderRepository orderRepository = OrderApplication.applicationContext.getBean(
+            OrderRepository.class
+        );
         return orderRepository;
     }
-
-
-
-
-
-
 }

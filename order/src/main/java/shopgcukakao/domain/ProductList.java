@@ -1,18 +1,16 @@
 package shopgcukakao.domain;
 
-import javax.persistence.*;
-import java.util.List;
 import java.util.Date;
+import java.util.List;
+import javax.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name="ProductList_table")
+@Table(name = "ProductList_table")
 @Data
 public class ProductList {
 
-        @Id
-        //@GeneratedValue(strategy=GenerationType.AUTO)
-        private Long id;
-
-
+    @Id
+    //@GeneratedValue(strategy=GenerationType.AUTO)
+    private Long id;
 }

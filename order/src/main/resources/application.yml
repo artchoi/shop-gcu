@@ -1,5 +1,12 @@
 server:
   port: 8080
+feign:
+  hystrix:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution.isolation.thread.timeoutInMilliseconds: 500
 spring:
   application:
     name: order
@@ -28,16 +35,20 @@ spring:
       bindings:
         event-in:
           group: order
-          destination: shopgcu
+          destination: shopgcukakao
           contentType: application/json
         event-out:
-          destination: shopgcu
+          destination: shopgcukakao
           contentType: application/json
 
 logging:
   level:
     org.hibernate.type: trace
     org.springframework.cloud: debug
+
+api:
+  url:
+    order: localhost:8081
 
 
 server:
@@ -63,10 +74,14 @@ spring:
       bindings:
         event-in:
           group: order
-          destination: shopgcu
+          destination: shopgcukakao
           contentType: application/json
         event-out:
-          destination: shopgcu
+          destination: shopgcukakao
           contentType: application/json
+
+api:
+  url:
+    order:8080
 
 
